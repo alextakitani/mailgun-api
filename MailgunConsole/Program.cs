@@ -1,25 +1,4 @@
-mailgun-api
-===========
-
-Type-safe [Mailgun](https://mailgun.com "Mailgun") API wrapper with implementations using [RestSharp](https://github.com/restsharp/RestSharp/ "RestSharp") and [ServiceStack.Text](https://github.com/ServiceStack/ServiceStack.Text "ServiceStack.Text")
-
-- Messages
-- Domains
-- Unsubscribes
-- Spam Complaints
-- Bounces
-- Stats
-- Events - **In Progress**
-- Routes
-- Campaigns
-- Webhooks
-- Mailing Lists
-- Email Validation
-
-# Sample Use #
-
-```c#
-using Mailgun;
+﻿using Mailgun;
 using Mailgun.RestSharp;
 using Mailgun.ServiceStack;
 using System;
@@ -29,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MailgunConsole {
-   class Program {
+    class Program {
         static void Main(string[] args) {
 
             string key = "YOUR MAILGUN API KEY HERE";
             string domain = "your.domain.here";
 
-			// Using ServiceStack
+            // Using ServiceStack
             var ssClient = new MailgunServiceStackClient(key);
             GetLogs(ssClient, domain);
 
@@ -79,5 +58,3 @@ namespace MailgunConsole {
         }
     }
 }
-```
-
